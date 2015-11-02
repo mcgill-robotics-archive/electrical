@@ -51,6 +51,15 @@
 ## Workflow:
 1. Sync repository (or `git pull`)
 2. Open file, do work, save file
-3. For layouts and schematics:
-   File > Preview... > Save > Save As: Jpeg Image (*.jpg), Area: Sheet > OK
-4. Sync repository (or `git pull` then `git push`)
+3. Select files using checkboxes (or `git add FILENAME`)
+4. Write message describing changes and press the commit button 
+  (or `git commit -m "MESSAGE"`)
+5. For layouts and schematics: `File` > `Preview...` > `Save` > 
+  `Save As: Jpeg Image (*.jpg)`, `Area: Sheet` > `OK`
+6. Sync repository (or `git pull` then `git push`)
+
+## Additional Rules:
+* __Changes to the auv, drone, rover, or components folders must go in separate commits 
+   (i.e. only change one of these folders in a single commit).__
+* Commit your changes often
+* Write meaningful commit messages
