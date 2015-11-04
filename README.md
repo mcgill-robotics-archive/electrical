@@ -1,6 +1,6 @@
 # McGill Robotics Electrical Version Control
 
-## File Structure Template:
+## File Structure Template
 ```
 ├── auv
 |   ├── board-1
@@ -30,7 +30,7 @@
             └── part-2.pdf
 ```
 
-## Naming Conventions:
+## Naming Conventions
   * Commit messages must:
     * Begin with capital letters
     * Start with a verb in the present tense
@@ -48,18 +48,26 @@
   * Part folders, component files, pattern files, and datasheets must be named
     after the part they are associated with
 
-## General Workflow:
+## General Workflow
 1. Sync repository (or `git pull`)
 2. Open file, do work, save file
-3. For layouts and schematics: `File` > `Preview...` > `Save` > 
-  `Save As: Jpeg Image (*.jpg)`, `Area: Sheet` > `OK`
+3. For layouts and schematics:
+   1. Open `File` > `Preview...`
+   2. Select `Print in Black only`
+   3. Set `Print scale` to 100%
+   4. Click `Center board` (one of the magnifying glass icons)
+   5. Click `Save`
+   6. Set `Save As` to `Jpeg Image (*.jpg)`
+   7. Set `Area` to `Sheet`
+   7. Change `Resolution` to 500 dpi
+   8. Click `OK`
 3. Select files using checkboxes (or `git add FILENAME`)
 4. Write message describing changes and press the commit button 
   (or `git commit -m "MESSAGE"`)
 5. You may repeat steps 2-4 several times before pushing if you like
 6. Sync repository (or `git pull` then `git push`)
 
-## Merge Conflicts:
+## Merge Conflicts
 * If someone has updated your board while you were working on it, 
   you will not be able to push to the Git repository
 * __Do not resolve this by overwriting the other person's changes__
@@ -75,9 +83,10 @@
        (__manually__)
 * On the command line, steps 2-4 correspond to running 
   `git reset --hard HEAD~1` until your conflicting commits
-  have been removed
+  have been removed (or run `git reset --hard SHA`, where SHA is the hash
+  of the commit you want to revert to)
 
-## Additional Rules:
+## Additional Rules
 * __Changes to the auv, drone, rover, or components folders must go in 
   separate commits (i.e. only change one of these folders in a 
   single commit)__
