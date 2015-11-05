@@ -3,31 +3,32 @@
 ## File Structure Template
 ```
 ├── auv
-|   ├── board-1
-|   |   ├── board-1_lay.dip
-|   |   ├── board-1_lay.jpg
-|   |   ├── board-1_sch.dch
-|   |   ├── board-1_sch.jpg
-|   |   └── board-1.txt
-|   └── board-2
-|       ├── board-2_lay.dip
-|       ├── board-2_lay.jpg
-|       ├── board-2_sch.dch
-|       ├── board-2_sch.jpg
-|       └── board-2.txt
+|   ├── motor-driver
+|   |   ├── motor-driver_lay.dip
+|   |   ├── motor-driver_lay_s1.jpg
+|   |   ├── motor-driver_lay_s2.jpg
+|   |   ├── motor-driver_sch.dch
+|   |   ├── motor-driver_sch_s1.jpg
+|   |   └── motor-driver.txt
+|   └── power-board
+|       ├── power-board_lay.dip
+|       ├── power-board_lay_s1.jpg
+|       ├── power-board_sch.dch
+|       ├── power-board_sch_s1.jpg
+|       └── power-board.txt
 ├── drone
 |   └── ...
 ├── rover
 |   └── ...
 └── components
-        ├── part-1
-        |   ├── part-1_com.eli
-        |   ├── part-1_pat.lib
-        |   └── part-1.pdf
-        └── part-2
-            ├── part-2_com.eli
-            ├── part-2_pat.lib
-            └── part-2.pdf
+        ├── iso3086
+        |   ├── iso3086_com.eli
+        |   ├── iso3086_pat.lib
+        |   └── iso3086.pdf
+        └── drv8842
+            ├── drv8842_com.eli
+            ├── drv8842_pat.lib
+            └── drv8842.pdf
 ```
 
 ## Naming Conventions
@@ -43,8 +44,9 @@
     * Layout-related file names must end with `_lay`
     * Component-related file names must end with `_com`
     * Pattern-related file names must end with `_pat`
-  * Board folders, schematic files, layout files, descriptions, and reference
-    images must share the same name
+  * Board folders, schematic files, layout files, and descriptions must share the same name
+  * Reference images must share the same names as above, but with the sheet number
+    (`_s#`) appended after the filetype suffix
   * Part folders, component files, pattern files, and datasheets must be named
     after the part they are associated with
 
@@ -59,8 +61,9 @@
    5. Click `Save`
    6. Set `Save As` to `Jpeg Image (*.jpg)`
    7. Set `Area` to `Sheet`
-   7. Change `Resolution` to 500 dpi
-   8. Click `OK`
+   8. Change `Resolution` to 500 dpi
+   9. Click `OK`
+   10. Repeat steps i. to ix. for each sheet
 3. Select files using checkboxes (or `git add FILENAME`)
 4. Write message describing changes and press the commit button 
   (or `git commit -m "MESSAGE"`)
