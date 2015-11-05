@@ -6,7 +6,6 @@
 |   ├── motor-driver
 |   |   ├── motor-driver_lay.dip
 |   |   ├── motor-driver_lay_s1.jpg
-|   |   ├── motor-driver_lay_s2.jpg
 |   |   ├── motor-driver_sch.dch
 |   |   ├── motor-driver_sch_s1.jpg
 |   |   └── motor-driver.txt
