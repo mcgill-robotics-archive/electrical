@@ -1,5 +1,5 @@
 # Sample Reference Repository
-I've uploaded Bei's USB Blinker tutorial board here to demonstrate how
+I've uploaded Bei's LED Blinker tutorial board here to demonstrate how
   to use the Git repository.
 I gave it its own folder so as to not clutter the rest of the 
   repository.
