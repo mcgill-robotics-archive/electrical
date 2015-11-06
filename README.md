@@ -10,13 +10,13 @@
 |   |   ├── motor-driver_sch.dch
 |   |   ├── motor-driver_sch_s1.jpg
 |   |   ├── motor-driver_sch_s2.jpg
-|   |   └── motor-driver.txt
+|   |   └── README.md
 |   └── power-board
 |       ├── power-board_lay.dip
 |       ├── power-board_lay_l1.jpg
 |       ├── power-board_sch.dch
 |       ├── power-board_sch_s1.jpg
-|       └── power-board.txt
+|       └── README.md
 ├── drone
 |   └── ...
 ├── rover
@@ -32,7 +32,7 @@
             └── drv8842.pdf
 ```
 
-## Naming Conventions
+## Style Conventions
   * Commit messages must:
     * Begin with capital letters
     * Start with a verb in the present tense
@@ -46,11 +46,14 @@
     * Layout-related files: `_lay`
     * Component-related files: `_com`
     * Pattern-related files: `_pat`
-  * Board folders, schematic files, layout files, and descriptions must share the same name
+  * Board folders, schematic files, and layout files must share the same name
   * Reference images must share the same names as above, but the following must be
     appended _after_ the filetype suffixes:
     * Schematic images: sheet number `_s#`
     * Layout images: layer number `_l#`
+  * Board READMEs must: 
+    * Have the board's name as a title (i.e. have `# Board Name` on their first line)
+    * Contain a brief description of the board's fuction
   * Part folders, component files, pattern files, and datasheets must be named
     after the part they are associated with
 
