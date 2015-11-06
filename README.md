@@ -62,9 +62,9 @@
 2. Open file, do work, save file
 3. For layouts and schematics:
    1. Open `File` > `Preview...`
-   2. Select `Print in Black only`
+   2. Select `Print in Black only` [layout only]
    3. Set `Print scale` to 100%
-   4. Click `Center board` (one of the magnifying glass icons)
+   4. Click `Center board` (one of the magnifying glass icons) [layout only]
    5. Click `Save`
    6. Set `Save As` to `Jpeg Image (*.jpg)`
    7. Set `Area` to `Sheet`
