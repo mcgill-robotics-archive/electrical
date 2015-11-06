@@ -106,5 +106,6 @@
   single commit)__
 * Commit your changes often
 * Write meaningful commit messages
+* Look at the sample folder for a style example
 * If you run in to problems, contact a division leader instead of messing
   around blindly
