@@ -54,10 +54,13 @@
     * Schematic images: sheet number `_s#`
     * Layout images: layer number `_l#`
   * Board and component READMEs must: 
-    * Have the board/component's name as a title (i.e. have `# Board Name` on their first line)
-    * Have the author's name in bold on the next line (`__Author: Name__`)
-    * Contain a brief description of the boardboard/component's fuction
-      (obviously in more detail for the board)
+    * Have the board/component's name as a title
+      (i.e. have `# Board Name` on the first line)
+    * Have the author's name on the second line (`__Author:__ Name`)
+    * Have the board/component description starting on the third line 
+      (`__Description:__ Describe describe describe.`)
+    * Have the schematic reference image embedded in the line after that
+      (`__Schematic:__ ![](image-name.jpg)`)
   * Part folders, component files, pattern files, and datasheets must be named
     after the part they are associated with
 
