@@ -74,7 +74,8 @@ __Schematic:__ ![](motor-driver.jpg)
 3. For layouts and schematics:
    1. Open `File` > `Preview...`
    2. _Layout only:_ Select `Print in Black only`
-   3. Set `Print scale` to 100%
+   3. Set `Print scale` to something reasonable and _stick with it._ 
+      Change it only if the board needs to be scaled down
    4. _Layout only:_ Click `Center board` (one of the magnifying glass icons)
    5. Click `Save`
    6. Set `Save As` to `Jpeg Image (*.jpg)`
