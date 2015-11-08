@@ -34,6 +34,17 @@
             └── README.md
 ```
 
+## README Template
+```
+# Motor Driver
+
+__Author:__ Jane Doe
+
+__Description:__ Motor driver board with 30A current rating
+
+__Schematic:__ ![](motor-driver.jpg)
+```
+
 ## Style Conventions
   * Commit messages must:
     * Begin with capital letters
@@ -53,14 +64,7 @@
     appended _after_ the filetype suffixes:
     * Schematic images: sheet number `_s#`
     * Layout images: layer number `_l#`
-  * Board and component READMEs must: 
-    * Have the board/component's name as a title
-      (i.e. have `# Board Name` on the first line)
-    * Have the author's name on the second line (`__Author:__ Name`)
-    * Have the board/component description starting on the third line 
-      (`__Description:__ Describe describe describe.`)
-    * Have the schematic reference image embedded in the line after that
-      (`__Schematic:__ ![](image-name.jpg)`)
+  * Board and component READMEs follow the template above (schematic link only needed for boards)
   * Part folders, component files, pattern files, and datasheets must be named
     after the part they are associated with
 
@@ -103,7 +107,7 @@
   have been removed (or run `git reset --hard SHA`, where SHA is the hash
   of the commit you want to revert to)
 
-## Additional Rules
+## Additional Notes
 * __Changes to the auv, drone, rover, or components folders must go in 
   separate commits (i.e. only change one of these folders in a 
   single commit)__
