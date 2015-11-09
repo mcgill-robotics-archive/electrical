@@ -22,16 +22,10 @@
 ├── rover
 |   └── ...
 └── components
-        ├── iso3086
-        |   ├── iso3086_com.eli
-        |   ├── iso3086_pat.lib
-        |   ├── iso3086.pdf
-        |   └── README.md
-        └── drv8842
-            ├── drv8842_com.eli
-            ├── drv8842_pat.lib
-            ├── drv8842.pdf
-            └── README.md
+    ├── drv8842_com.eli
+    ├── drv8842_pat.lib
+    ├── iso3086_com.eli
+    └── iso3086_pat.lib
 ```
 
 ## README Template
@@ -64,8 +58,8 @@ __Schematic:__ ![](motor-driver.jpg)
     appended _after_ the filetype suffixes:
     * Schematic images: sheet number `_s#`
     * Layout images: layer number `_l#`
-  * Board and component READMEs follow the template above (schematic link only needed for boards)
-  * Part folders, component files, pattern files, and datasheets must be named
+  * Board READMEs follow the template above
+  * Component files and pattern files must be named
     after the part they are associated with
 
 ## General Workflow
@@ -80,7 +74,7 @@ __Schematic:__ ![](motor-driver.jpg)
    5. Click `Save`
    6. Set `Save As` to `Jpeg Image (*.jpg)`
    7. Set `Area` to `Sheet`
-   8. Change `Resolution` to 500 dpi
+   8. Keep `Resolution` at 100 dpi
    9. Click `OK`
    10. Repeat steps i. to ix. for each sheet
 3. Select files using checkboxes (or `git add FILENAMES`)
