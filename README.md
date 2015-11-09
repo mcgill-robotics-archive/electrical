@@ -106,6 +106,7 @@ __Schematic:__ ![](motor-driver.jpg)
 * __Changes to the auv, drone, rover, or components folders must go in 
   separate commits (i.e. only change one of these folders in a 
   single commit)__
+* Do not push temporary files to GitHub (i.e. files surrounded by `~`s)
 * Commit your changes often
 * Write meaningful commit messages
 * Look at the sample folder for a style example
