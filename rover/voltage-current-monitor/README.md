@@ -1,7 +1,7 @@
 # Voltage-Current Monitor
 
-__Author: __Yaniv Bronshtein
+__Author:__ Yaniv Bronshtein
 
-__Description: __This is an I2C Current Voltage Monitor
+__Description:__ This is an I2C Current Voltage Monitor
 
-__Schematic: __![](current-voltage-monitor_sch_s1.jpg)
+__Schematic:__ ![](current-voltage-monitor_sch_s1.jpg)
