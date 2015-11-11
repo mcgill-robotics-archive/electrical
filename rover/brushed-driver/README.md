@@ -1,4 +1,4 @@
-# Brushed Driver
+﻿# Brushed Driver
 
 __Author:__ Fred-Éric Désulmé and Nicholas Roy
 
