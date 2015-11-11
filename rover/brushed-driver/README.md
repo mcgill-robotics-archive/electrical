@@ -1,6 +1,6 @@
 # Brushed Driver
 
-__Author:__ Fred-Éric Désulmé
+__Author:__ Fred-Éric Désulmé and Nicholas Roy
 
 __Description:__ Brushed driver
 

@@ -1,6 +1,6 @@
 # Arm Encoder Transceiver
 
-__Author:__ Bobak Hamed-Baghi
+__Author:__ Bobak Hamed-Baghi and Jerry(Bin) Wu
 
 __Description:__ SSI transceiver board for Renishaw magnetic encoders
 
