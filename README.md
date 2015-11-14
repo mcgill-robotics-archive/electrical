@@ -74,7 +74,7 @@ __Schematic:__ ![](motor-driver_sch_s1.jpg)
    5. Click `Save`
    6. Set `Save As` to `Jpeg Image (*.jpg)`
    7. Set `Area` to `Sheet`
-   8. Keep `Resolution` at 100 dpi
+   8. Keep `Resolution` at 200 dpi
    9. Click `OK`
    10. Repeat steps i. to ix. for each sheet
 3. Select files using checkboxes (or `git add FILENAMES`)
