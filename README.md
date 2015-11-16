@@ -51,16 +51,13 @@ __Schematic:__ ![](motor-driver_sch_s1.jpg)
   * The following suffixes must be applied:
     * Schematic-related files: `_sch`
     * Layout-related files: `_lay`
-    * Component-related files: `_com`
-    * Pattern-related files: `_pat`
   * Board folders, schematic files, and layout files must share the same name
   * Reference images must share the same names as above, but the following must be
     appended _after_ the filetype suffixes:
     * Schematic images: sheet number `_s#`
     * Layout images: layer number `_l#`
   * Board READMEs follow the template above
-  * Component files and pattern files must be named
-    after the part they are associated with
+  * Component and pattern files must follow the format: `manufacturer-part-name` 
 
 ## General Workflow
 1. Sync repository (or `git pull`)
