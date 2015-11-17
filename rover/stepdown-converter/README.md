@@ -4,4 +4,4 @@ __Author:__ Jun Shin
 
 __Description:__ Boost converter
 
-__Schematic:__ ![](boost-converter_LM3478_sch_s1.jpg)
+__Schematic:__ ![](stepdown-converter-lm25117_sch_s1.jpg)
