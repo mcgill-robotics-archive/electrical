@@ -22,10 +22,10 @@
 ├── rover
 |   └── ...
 └── components
-    ├──	ti-drv8842-brushed_motor_driver.eli
+    ├── ti-drv8842-brushed_motor_driver.eli
     ├── ti-drv8842-brushed_motor_driver.lib
-    ├── iso3086-isolated_rs485_transceiver.eli
-    └── iso3086-isolated_rs485_transceiver.lib
+    ├── ti-iso3086-isolated_rs485_transceiver.eli
+    └── ti-iso3086-isolated_rs485_transceiver.lib
 ```
 
 ## README Template
