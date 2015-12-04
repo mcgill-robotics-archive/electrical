@@ -14,5 +14,5 @@ __Schematic:__          ![](boost-converter_LM3478_sch_s1.jpg)
 
 __Components:__         ![](boost-converter_LM3478_sch_comp_s1.jpg)
 
-__PCB Layout V4:__      ![](boost-converter_LM3478_lay_V5_l1.jpg)
+__PCB Layout Final:__      ![](boost-converter_LM3478_lay_V5_l1.jpg)
 
