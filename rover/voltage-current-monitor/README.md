@@ -6,6 +6,7 @@ __Description:__ This is a high-side I2C Current and Voltage Monitor (LTC4151CDD
 
 __Schematic:__ ![](voltage-current-monitor_sch_s1.jpg)
 
+__PCB Final lay 1:__ ![](voltage-current-monitor_lay_l1.jpg)
 
-_Comments:_ Put resistor across Adresse line in series (0605).
+__PCB Final lay 2:__ ![](voltage-current-monitor_lay_l2.jpg)
             
