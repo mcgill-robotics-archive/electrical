@@ -1,0 +1,24 @@
+#
+#Units
+#
+U IN
+
+#
+#Layer features
+#
+S P 0
+OB 0 0 I
+OS 0 2.1
+OS 3.8 2.1
+OS 3.9 2
+OS 3.9 1.6
+OS 4 1.5
+OS 4 0.15
+OS 3.9 0.05
+OS 3.9 0
+OS 0 0
+OS 0 0
+OE
+SE
+
+
