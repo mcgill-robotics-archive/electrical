@@ -1,0 +1,21 @@
+G04 DipTrace Beta 2.9.0.1*
+G04 BottomAssy.gbr*
+%MOIN*%
+G04 #@! TF.FileFunction,Drawing,Bot*
+G04 #@! TF.Part,Single*
+%ADD10C,0.009843*%
+%FSLAX26Y26*%
+G04*
+G70*
+G90*
+G75*
+G01*
+G04 BotAssy*
+%LPD*%
+X1850235Y2906697D2*
+D10*
+X1450235D1*
+Y2506697D1*
+X1850235D1*
+Y2906697D1*
+M02*
