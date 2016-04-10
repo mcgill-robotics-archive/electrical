@@ -18,13 +18,13 @@ __Features:__
 - Added back silkscreen
 
 ## 3D Rander:
-<img src="isoduino-mega_lay_3d1.jpg" width="200">
+<img src="isoduino-mega_lay_3d1.png" width="400">
 
 ## Schematic:
-<img src="" width="200">
-<img src="" width="200">
-<img src="" width="200">
+<img src="isoduino-mega_sch_s1.jpg" width="400"><br>
+<img src="isoduino-mega_sch_s2.jpg" width="400"><br>
+<img src="isoduino-mega_sch_s3.jpg" width="400">
 
 ## Layout:
-<img src="isoduino-mega_lay_l1.jpg" width="200">
-<img src="isoduino-mega_lay_l2.jpg" width="200">
+<img src="isoduino-mega_lay_l1.jpg" width="400"><br>
+<img src="isoduino-mega_lay_l2.jpg" width="400">
