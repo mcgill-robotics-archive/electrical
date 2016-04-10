@@ -1,12 +1,12 @@
-# Isoduino Mega640
+# Isoduino Mega 640/1280/2560
 
 __Author:__ Bei Chen Liu
 
-__Description:__ An isolated Arduino Compatible devolopment board specially designed for robotics operation.
+__Description:__ An isolated Arduino Compatible development board specially designed for robotics operation.
 
-__Features:__ 
+__Features:__
 * Isolated UART to protect computer from motor noise.
-* Switching regulator to allow big range of voltage input.
+* Switching regulator to allow bigger range of voltage input.
 
 __3D Rander:__ ![](isoduino-mega_lay_3d1.png)
 
@@ -14,9 +14,11 @@ __Schematic:__ ![](isoduino-mega_sch_s1.jpg) ![](isoduino-mega_sch_s2.jpg) ![](i
 
 __Layout:__ ![](isoduino-mega_lay_l1.jpg) ![](isoduino-mega_lay_l2.jpg)
 
-
-__AVRdude:__
-'''
-avrdude -P /dev/tty.usbserial-DA00WYQF -b 19200 -c avrisp -p m640 -v -e -U efuse:w:0xF5:m -U hfuse:w:0xD6:m -U lfuse:w:0xFF:m;
-avrdude -P /dev/tty.usbserial-DA00WYQF -b 19200 -c avrisp -p m640 -v -e -U flash:w:/Users/baycken/Desktop/optiboot_atmega640.hex -U lock:w:0x0F:m
-'''
+## Changelog:
+### Version 1.3
+- Change the non isolated mode name from 'USB Mode' to 'Bypass Mode'
+- Added a power mux to handle power switching from isolated mode to bypass mode
+- Added power LED for mode indication
+- Change user LED behavior: LED will turn on if the pin is high
+- Update components and front silk
+- Added back silkscreen
