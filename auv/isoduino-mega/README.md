@@ -9,6 +9,12 @@ __Features:__
 * Switching regulator to allow bigger range of voltage input.
 
 ## Changelog:
+
+### Version 1.3B
+- Removed oscillator resistor
+- Better routing for the reset line
+- Reduce the board size by a little to make fit in 10cm
+
 ### Version 1.3
 - Change the non isolated mode name from 'USB Mode' to 'Bypass Mode'
 - Added a power mux to handle power switching from isolated mode to bypass mode
