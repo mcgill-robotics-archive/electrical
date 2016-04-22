@@ -1,0 +1,25 @@
+# Isoduino Mega 640/1280/2560
+
+__Author:__ Ahmed Sami, Bei Chen Liu
+
+__Description:__ An Arduino Leonardo Clone designed to work at 3.3V with a MS5803 pressure sensor connected on the I2C bus.
+
+__Features:__
+* Arduino Compatible Board
+* High resolusion pressure sensor allowing precise depth measurement 
+
+## Changelog:
+
+### Version 1.0
+- Initial Release
+
+## 3D Rander:
+<img src="depth-sensor_3d1.jpg" width="400"><br>
+<img src="depth-sensor_3d2.jpg" width="400">
+
+## Schematic:
+<img src="depth-sensor_sch.jpg" width="400">
+
+## Layout:
+<img src="depth-sensor_lay1.jpg" width="400"><br>
+<img src="depth-sensor_lay2.jpg" width="400">
