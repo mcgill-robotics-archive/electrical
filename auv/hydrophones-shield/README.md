@@ -1,4 +1,4 @@
-# Isoduino Mega 640/1280/2560
+# Hydrophones Shield
 
 __Author:__ Sinead Bolt
 
