@@ -6,4 +6,6 @@ __Description:__
 
 Schematic for general use in other circuits.
 
-Includes ICSP and external FTDI connectors.
+Copy and paste this in to a hierarchy sheet, connect hierarchy connectors to the ports you need, and use the hierarchy block generated in your circuit.
+
+Includes reset button, LED, ICSP port, and external FTDI port.
