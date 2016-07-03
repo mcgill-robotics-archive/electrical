@@ -5,8 +5,9 @@
 ├── auv
 |   ├── io
 |   |   ├── motor-driver
-|   |   |   ├── motor-driver.dip
-|   |   |   ├── motor-driver_sch.dch
+|   |   |   ├── motor-driver_v1.dip
+|   |   |   ├── motor-driver_v2.dip
+|   |   |   ├── motor-driver.dch
 |   |   |   └── README.md
 |   |   └── depth-sensor
 |   |       ├── depth-sensor.dip
@@ -14,8 +15,8 @@
 |   |       └── README.md
 |   └── power
 |       └── power-board
-|           ├── power-board_lay.dip
-|           ├── power-board_sch.dch
+|           ├── power-board.dip
+|           ├── power-board.dch
 |           └── README.md
 ├── drone
 |   └── ...
@@ -24,10 +25,10 @@
 ├── rover
 |   └── ...
 ├── components
-|   ├── ti_drv8842-brushed-motor-driver.eli
-|   ├── ti_drv8842-brushed-motor-driver.lib
-|   ├── ti_iso3086-isolated-rs485-transceiver.eli
-|   └── ti_iso3086-isolated-rs485-transceiver.lib
+|   ├── ti_drv8842_brushed-motor-driver.eli
+|   ├── ti_drv8842_brushed-motor-driver.lib
+|   ├── ti_iso3086_isolated-rs485-transceiver.eli
+|   └── ti_iso3086_isolated-rs485-transceiver.lib
 └── schematic-template.dch
 ```
 
@@ -57,7 +58,7 @@ __Description:__ Motor driver board with 30A current rating
   * Schematic files must:
     * Be based on the `schematic-template.sch` file in the root directory
     * Have all the info in the title block filled out
-  * Component and pattern files must follow the format: `manufacturer_part-number-name`
+  * Component and pattern files must follow the format: `manufacturer_part-number_part-function`
   * Board READMEs must follow the template above
 
 ## General Workflow
@@ -66,7 +67,7 @@ __Description:__ Motor driver board with 30A current rating
 3. Select files using checkboxes (or `git add FILENAMES`)
 4. Write message describing changes and press the commit button 
   (or `git commit -m "MESSAGE"`)
-5. You may repeat steps `2.`-`4.` several times before pushing if you like
+5. You may repeat steps 2.-4. several times before pushing if you like
 6. Sync repository (or `git pull` then `git push`)
 
 ## Merge Conflicts
@@ -83,7 +84,7 @@ __Description:__ Motor driver board with 30A current rating
     5. Sync the repository
     6. Based on the new version of the file, _manually_ 
        re-apply your changes
-* On the command line, steps `2.`-`4.` correspond to running 
+* On the command line, steps 2.-4. correspond to running 
   `git reset --hard HEAD~1` until your conflicting commits
   have been removed (or run `git reset --hard SHA`, where SHA is the hash
   of the commit you want to revert to)
