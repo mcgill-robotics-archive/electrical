@@ -1,5 +1,9 @@
 ~*
 *~
 *.bmp
+*.zip
+*.stl
+*.stp
+*.txt
 Thumbs.db
 .DS_Store
