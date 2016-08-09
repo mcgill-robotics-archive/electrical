@@ -3,7 +3,7 @@
   
   **Removing print statements in either Master or Slave code causes timing 
   differences due to read and write overheads.
-  Each clock cycle is supposed to be 8us, unless delayed.**
+  Each clock cycle is supposed to be 0.25us, unless delayed.**
 */
 
 #include <SPI.h>
