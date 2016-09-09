@@ -10,6 +10,11 @@ __Features:__
 
 ## Changelog:
 
+### Version 1.2
+- Remove a lot of unecessary components
+- Switch to QFN for the ATmega32u4
+- Made the board ciruilar and fit within 1 inch diameter
+
 ### Version 1.0
 - Initial Release
 

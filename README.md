@@ -3,29 +3,33 @@
 ## File Structure Template
 ```
 ├── auv
-|   ├── motor-driver
-|   |   ├── motor-driver_lay.dip
-|   |   ├── motor-driver_lay_l1.jpg
-|   |   ├── motor-driver_lay_l2.jpg
-|   |   ├── motor-driver_sch.dch
-|   |   ├── motor-driver_sch_s1.jpg
-|   |   ├── motor-driver_sch_s2.jpg
-|   |   └── README.md
-|   └── power-board
-|       ├── power-board_lay.dip
-|       ├── power-board_lay_l1.jpg
-|       ├── power-board_sch.dch
-|       ├── power-board_sch_s1.jpg
-|       └── README.md
+|   ├── io
+|   |   ├── motor-driver
+|   |   |   ├── motor-driver_v1.dip
+|   |   |   ├── motor-driver_v2.dip
+|   |   |   ├── motor-driver.dch
+|   |   |   └── README.md
+|   |   └── depth-sensor
+|   |       ├── depth-sensor.dip
+|   |       ├── depth-sensor.dch
+|   |       └── README.md
+|   └── power
+|       └── power-board
+|           ├── power-board.dip
+|           ├── power-board.dch
+|           └── README.md
 ├── drone
+|   └── ...
+├── general
 |   └── ...
 ├── rover
 |   └── ...
-└── components
-    ├── ti-drv8842-brushed_motor_driver.eli
-    ├── ti-drv8842-brushed_motor_driver.lib
-    ├── ti-iso3086-isolated_rs485_transceiver.eli
-    └── ti-iso3086-isolated_rs485_transceiver.lib
+├── components
+|   ├── ti_drv8842_brushed-motor-driver.eli
+|   ├── ti_drv8842_brushed-motor-driver.lib
+|   ├── ti_iso3086_isolated-rs485-transceiver.eli
+|   └── ti_iso3086_isolated-rs485-transceiver.lib
+└── schematic-template.dch
 ```
 
 ## README Template
@@ -35,49 +39,35 @@
 __Author:__ Jane Doe
 
 __Description:__ Motor driver board with 30A current rating
-
-__Schematic:__ ![](motor-driver_sch_s1.jpg)
 ```
 
 ## Style Conventions
   * Commit messages must:
-    * Begin with capital letters
+    * Refer to the board that has changed
+    * Begin with a capital letter
     * Start with a verb in the present tense
     * Have no period at the end
     * Be less than 80 characters
-  * File names must:
+    * Be informative and meaningful
+  * File/folder names must:
     * Be written in lowercase
     * Have words separated by dashes `-`
-  * The following suffixes must be applied:
-    * Schematic-related files: `_sch`
-    * Layout-related files: `_lay`
-  * Board folders, schematic files, and layout files must share the same name
-  * Reference images must share the same names as above, but the following must be
-    appended _after_ the filetype suffixes:
-    * Schematic images: sheet number `_s#`
-    * Layout images: layer number `_l#`
-  * Board READMEs follow the template above
-  * Component and pattern files must follow the format: `manufacturer-part-name` 
+  *  Board files must:
+    * Share the same name as their folder
+    * Have a `_v1`, `_v2`, etc suffix to indicate the version (if there are several)
+  * Schematic files must:
+    * Be based on the `schematic-template.sch` file in the root directory
+    * Have all the info in the title block filled out
+  * Component and pattern files must follow the format: `manufacturer_part-number_part-function`
+  * Board READMEs must follow the template above
 
 ## General Workflow
 1. Sync repository (or `git pull`)
 2. Open file, do work, save file
-3. For layouts and schematics:
-   1. Open `File` > `Preview...`
-   2. _Layout only:_ Select `Print in Black only`
-   3. Set `Print scale` to something reasonable and _stick with it._ 
-      Change it only if the board needs to be scaled down
-   4. _Layout only:_ Click `Center board` (one of the magnifying glass icons)
-   5. Click `Save`
-   6. Set `Save As` to `Jpeg Image (*.jpg)`
-   7. Set `Area` to `Sheet`
-   8. Keep `Resolution` at 200 dpi
-   9. Click `OK`
-   10. Repeat steps i. to ix. for each sheet
 3. Select files using checkboxes (or `git add FILENAMES`)
 4. Write message describing changes and press the commit button 
   (or `git commit -m "MESSAGE"`)
-5. You may repeat steps 2-4 several times before pushing if you like
+5. You may repeat steps 2.-4. several times before pushing if you like
 6. Sync repository (or `git pull` then `git push`)
 
 ## Merge Conflicts
@@ -94,7 +84,7 @@ __Schematic:__ ![](motor-driver_sch_s1.jpg)
     5. Sync the repository
     6. Based on the new version of the file, _manually_ 
        re-apply your changes
-* On the command line, steps 2-4 correspond to running 
+* On the command line, steps 2.-4. correspond to running 
   `git reset --hard HEAD~1` until your conflicting commits
   have been removed (or run `git reset --hard SHA`, where SHA is the hash
   of the commit you want to revert to)
@@ -103,9 +93,5 @@ __Schematic:__ ![](motor-driver_sch_s1.jpg)
 * __Changes to the auv, drone, rover, or components folders must go in 
   separate commits (i.e. only change one of these folders in a 
   single commit)__
-* Do not push temporary files to GitHub (i.e. files surrounded by `~`s)
-* Commit your changes often
-* Write meaningful commit messages
-* Look at the sample folder for a style example
 * If you run in to problems, contact a division leader instead of messing
   around blindly
