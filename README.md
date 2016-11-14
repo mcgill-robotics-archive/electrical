@@ -94,4 +94,4 @@ __Description:__ Motor driver board with 30A current rating
   separate commits (i.e. only change one of these folders in a 
   single commit)__
 * If you run in to problems, contact a division leader instead of messing
-  around blindly
+  around
