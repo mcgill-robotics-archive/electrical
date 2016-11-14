@@ -36,7 +36,7 @@
 ```
 # Motor Driver
 
-__Author:__ Jane Doe
+__Author:__ John Doe
 
 __Description:__ Motor driver board with 30A current rating
 ```
