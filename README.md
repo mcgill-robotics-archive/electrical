@@ -67,7 +67,7 @@ __Description:__ Motor driver board with 30A current rating
 3. Select files using checkboxes (or `git add FILENAMES`)
 4. Write message describing changes and press the commit button 
   (or `git commit -m "MESSAGE"`)
-5. You may repeat steps 2.-4. several times before pushing if you like
+5. You may repeat steps 2.-4. several times before pushing if you want
 6. Sync repository (or `git pull` then `git push`)
 
 ## Merge Conflicts
