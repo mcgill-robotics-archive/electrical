@@ -8,8 +8,16 @@ Second iteration of driver board for the brushed DC motors in Mars Rover arm.
 
 - This version incorporates two DRV8842 chips as opposed to one in the first version.
 
-- It uses a single 80-pin LSEM connector for power, ground and outputs. This is connected to the Tiva controller via the arm backplane.
+- It uses a single 80-pin LSEM connector for power, ground and the motor outputs OUT1, OUT2. This is connected to the Tiva controller via the arm backplane.
 
-- For each chip, currents I0-I4 are the input currents, set to high (hardwired).
+- IN1 and IN2 are the logic input controls fot OUT1 and OUT2 respectively.
 
-- For each chip, the DCY singals are the decay modes that are set ot high (hardwired) for fast decay.
+- nRESET is the reset input: low initializes logic and disables H-bridge outputs.
+
+- nSLEEP is the sleep mode input: high to enable device, low to enter sleep mode.
+
+- nFAULT is the fault status: low when in fault condition.
+
+- Currents I0-I4 are the input currents: set to high (hardwired).
+
+- DCY singals are the decay modes: set ot high (hardwired) for fast decay.
