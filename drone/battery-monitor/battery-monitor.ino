@@ -1,12 +1,12 @@
-#include <Adafruit_NeoPixel.h>
+#include "Adafruit_NeoPixel.h"
 
-#define NUM_LEDS 6
 #define VOLTAGE_HIGH 24.8f
 #define VOLTAGE_LOW 20.5f
 #define RESISTOR_HIGH  47000.0f
 #define RESISTOR_LOW   10000.0f
 #define VOLT_CONVERT 5.0 / 1024.0 / (RESISTOR_LOW / (RESISTOR_HIGH + RESISTOR_LOW)) 
 
+#define NUM_LEDS 6
 #define PIN_LED 1
 #define PIN_BUTTON 2
 #define PIN_ANALOG A2
