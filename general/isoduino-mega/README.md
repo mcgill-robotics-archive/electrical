@@ -10,6 +10,14 @@ __Features:__
 
 ## Changelog:
 
+### Version 1.4
+- Change the isolation IC to a more common form factor
+- Reduce size of some resistors, capacitors and LEDs
+- Change the size of and value PTC fuse
+- Change the USB connector from mini to micro
+- Swap label for user LEDs (LED0 and LED1)
+- Reroute most of the board to fit the changes
+
 ### Version 1.3B
 - Removed oscillator resistor
 - Better routing for the reset line
