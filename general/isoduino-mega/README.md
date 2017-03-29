@@ -11,6 +11,11 @@ __Features:__
 ## Changelog:
 
 ### Version 1.4
+- Add the ability to sense input voltage level using A0 and/or A8
+- Add the ability to sense if USB power is available
+- Add the ability to sense power mux state
+- Add the ability to force mux auto-select 5V source or force mux to use buck 5V 
+- Fix reboot on bypass power loss by changing the TPS2115A to TPS2113A
 - Change the isolation IC to a more common form factor
 - Reduce size of some resistors, capacitors and LEDs
 - Change the size of and value PTC fuse
