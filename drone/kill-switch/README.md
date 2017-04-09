@@ -10,7 +10,7 @@ __Description__: A simple [high-side PMOS switch](http://www.onsemi.com/pub/Coll
 - **R3**: Resistor for external LEDs. Does not need to be populated if not used.
 - **R4, D1**: LED indicator for input voltage. Does not need to be populated if not used.
 - **R5, D2**: LED indicator for output voltage. Does not need to be populated if not used.
-- **S1**: Connector for external switch.
+- **S1**: Connector for external switch. The kill switch will mimic the state of the external switch.
 	- **Pin 1, Pin 2**: Ground connections.
 	- **Pin 3**: Switch connection, connect swithch between this pin and ground to control the circuit.
 	- **Pin 4**: External LED connection: connect the anode of the LED to this pin and cathod to ground. Use R3 as current-limiting resisitance. Can be left floating when not used. 
