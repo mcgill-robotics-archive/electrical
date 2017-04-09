@@ -50,17 +50,17 @@ To poweroff:
 - 5V0: 5.0V power LED.
 - 3V3: 3.3V power LED.
 - FIX: GPS fix LED:
-⋅⋅- On for 1 sec, off for 1 sec: Not fixed.
-⋅⋅- Constant off: Fixed.  
+	+ On for 1 sec, off for 1 sec: Not fixed.
+	+ Constant off: Fixed.  
 
 ## Detail Explanation:
 - Input voltage come in from J2 and go through shunt resistor of the current monitor, then to the buck capacitor. Then split to power the buck convertor and the motor driver.
-⋅⋅- Motor driver is controlled by the RPi and the PCA9633. All the enble pins are connected to gether and is controlled by the pin 11 (GPIO 17) of the RPi. The PWM signals are generated the by PCA9633.
-⋅⋅- Buck convertor controller is TPS54302 and can take up to 26V, but the maximum voltage is limited by the voltage rating of the input capactior, thus the true maxinum input voltage is 16V. The under voltage lockout is controlled by the resisistor R3 and R4 and is set to stop at 10V and restore at 11V to protect the battery for ecess drainage. The output voltage is set by the feed back resistors R1 and R2 to 5V to power the RPi. The output of the buck convertor is connected to an OR-ing diode made up of the PFET and matched PNP transistors and then directly to 5V net of the RPi. It is safe to connect both 5V from USB power connector and the 5V from the buck convertor. All the rest of the components are powered by RPi's 3.3V line.
-⋅⋅⋅- There are 4 components connected to the ARM I2C line:
-⋅⋅⋅⋅- Current sensor INA219 at 0x40.
-⋅⋅⋅⋅- PWM controller PCA9633 at 0x03 (reset), 0x62 (normal).
-⋅⋅⋅⋅- 9-axis IMU MPU9250 at 0x69.
-⋅⋅⋅⋅- Real time clock DS3231M at 0x68. This device should be claimed by the kernel driver through `config.txt` settings.
-⋅⋅⋅- GPS module FGPMMOPA6C is connected to the ARM UART line. You need to either disable to UART or use mini-UART for the Bluetooth for RPi3 through `config.txt` to have stable communication with the GPS module. 
-⋅⋅- A coin cell battery is provided to use and backup supply for the real time clock and the GPS.
+	- Motor driver is controlled by the RPi and the PCA9633. All the enble pins are connected to gether and is controlled by the pin 11 (GPIO 17) of the RPi. The PWM signals are generated the by PCA9633.
+	- Buck convertor controller is TPS54302 and can take up to 26V, but the maximum voltage is limited by the voltage rating of the input capactior, thus the true maxinum input voltage is 16V. The under voltage lockout is controlled by the resisistor R3 and R4 and is set to stop at 10V and restore at 11V to protect the battery for ecess drainage. The output voltage is set by the feed back resistors R1 and R2 to 5V to power the RPi. The output of the buck convertor is connected to an OR-ing diode made up of the PFET and matched PNP transistors and then directly to 5V net of the RPi. It is safe to connect both 5V from USB power connector and the 5V from the buck convertor. All the rest of the components are powered by RPi's 3.3V line.
+		- There are 4 components connected to the ARM I2C line:
+			- Current sensor INA219 at 0x40.
+			- PWM controller PCA9633 at 0x03 (reset), 0x62 (normal).
+			- 9-axis IMU MPU9250 at 0x69.
+			- Real time clock DS3231M at 0x68. This device should be claimed by the kernel driver through `config.txt` settings.
+		- GPS module FGPMMOPA6C is connected to the ARM UART line. You need to either disable to UART or use mini-UART for the Bluetooth for RPi3 through `config.txt` to have stable communication with the GPS module. 
+	- A coin cell battery is provided to use and backup supply for the real time clock and the GPS.
