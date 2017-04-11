@@ -1,4 +1,4 @@
-# Isoduino Mega 640/1280/2560
+# Blinky Tape Board Atmega328P
 
 __Author:__ Juan Morency Trudel
 
