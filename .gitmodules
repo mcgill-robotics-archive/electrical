@@ -1,0 +1,3 @@
+[submodule "general/isoduino-mega"]
+	path = general/isoduino-mega
+	url = git@github.com:mcgill-robotics/isoduino-mega.git
