@@ -1,36 +1,25 @@
-# Isoduino Mega 640/1280/2560
+# Blinky Tape Board Atmega328P
 
-__Author:__ Bei Chen Liu
+__Author:__ Juan Morency Trudel
 
-__Description:__ An isolated Arduino Compatible development board specially designed for robotics operation.
+__Used In:__ C class 2017 AUV
 
-__Features:__
-* Isolated UART to protect computer from motor noise.
-* Switching regulator to allow bigger range of voltage input.
+__Description:__ Standalone microcontroller board using Atmega328p to control the LED strips on the AUV.
 
 ## Changelog:
 
-### Version 1.3B
-- Removed oscillator resistor
-- Better routing for the reset line
-- Reduce the board size by a little to make fit in 10cm
-
-### Version 1.3
-- Change the non isolated mode name from 'USB Mode' to 'Bypass Mode'
-- Added a power mux to handle power switching from isolated mode to bypass mode
-- Added power LED for mode indication
-- Change user LED behavior: LED will turn on if the pin is high
-- Update components and front silk
-- Added back silkscreen
+### Version 1.1
+- Changed the form factor to fit in the new AUV PV
+- Added a board egde connector
+- Added an additional digital output to control the LED strip if we want to make the 2 sides independent.
+- Added SPI connector for programming
 
 ## 3D Rander:
-<img src="isoduino-mega_lay_3d1.png" width="400">
+<img src="3D_blinky.png" width="400">
 
 ## Schematic:
-<img src="isoduino-mega_sch_s1.jpg" width="400"><br>
-<img src="isoduino-mega_sch_s2.jpg" width="400"><br>
-<img src="isoduino-mega_sch_s3.jpg" width="400">
+<img src="schem_blinky.PNG" width="400"><br>
 
 ## Layout:
-<img src="isoduino-mega_lay_l1.jpg" width="400"><br>
-<img src="isoduino-mega_lay_l2.jpg" width="400">
+<img src="Layout_blinky_top.jpg" width="400"><br>
+<img src="Layout_blinky_bottom.jpg" width="400">
