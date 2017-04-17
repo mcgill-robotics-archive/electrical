@@ -10,6 +10,9 @@ __Features:__
 
 ## Changelog:
 
+### Version 1.2.1
+- Changed the oscillator in the schematic and Layout to be 9 MHz
+
 ### Version 1.2
 - Remove a lot of unecessary components
 - Switch to QFN for the ATmega32u4
