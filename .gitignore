@@ -4,6 +4,8 @@
 *.zip
 *.stl
 *.stp
+*.step
+*.dipb*
 *.txt
 Thumbs.db
 .DS_Store
