@@ -3,6 +3,10 @@
 ## File Structure Template
 ```
 ├── auv
+|   ├── archive
+|   |   └── io
+|   |       └── motor-driver-old
+|   |           └── ...
 |   ├── io
 |   |   ├── motor-driver
 |   |   |   ├── motor-driver_v1.dip
@@ -25,10 +29,10 @@
 ├── rover
 |   └── ...
 ├── components
-|   ├── ti_drv8842_brushed-motor-driver.eli
-|   ├── ti_drv8842_brushed-motor-driver.lib
-|   ├── ti_iso3086_isolated-rs485-transceiver.eli
-|   └── ti_iso3086_isolated-rs485-transceiver.lib
+|   ├── texas_intrument.eli
+|   ├── texas_intrument.lib
+|   ├── linear_technology.eli
+|   └── linear_technology.lib
 └── schematic-template.dch
 ```
 
@@ -58,8 +62,10 @@ __Description:__ Motor driver board with 30A current rating
   * Schematic files must:
     * Be based on the `schematic-template.sch` file in the root directory
     * Have all the info in the title block filled out
-  * Component and pattern files must follow the format: `manufacturer_part-number_part-function`
+  * Component and pattern files should be added to manufacturer's library, if 
+  it deos exist, create a new one with full name of the manufacturer
   * Board READMEs must follow the template above
+  * **DO NOT** add DipTrace image file to the git repository (.dip0, .dip1, etc.)
 
 ## General Workflow
 1. Sync repository (or `git pull`)
@@ -71,7 +77,7 @@ __Description:__ Motor driver board with 30A current rating
 6. Sync repository (or `git pull` then `git push`)
 
 ## Merge Conflicts
-* If someone has updated your board while you were working on it, 
+* If someone has updated your board or library while you were working on it, 
   you will not be able to push to the Git repository
 * __Do not resolve this by overwriting the other person's changes__
 * You must get the other person's changes and re-apply yours manually:
