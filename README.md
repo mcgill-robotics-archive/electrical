@@ -3,6 +3,10 @@
 ## File Structure Template
 ```
 ├── auv
+|   ├── archive
+|   |   └── io
+|   |       └── motor-driver-old
+|   |           └── ...
 |   ├── io
 |   |   ├── motor-driver
 |   |   |   ├── motor-driver_v1.dip
@@ -25,12 +29,19 @@
 ├── rover
 |   └── ...
 ├── components
-|   ├── ti_drv8842_brushed-motor-driver.eli
-|   ├── ti_drv8842_brushed-motor-driver.lib
-|   ├── ti_iso3086_isolated-rs485-transceiver.eli
-|   └── ti_iso3086_isolated-rs485-transceiver.lib
+|   ├── part-number.eli
+|   ├── part-number.lib
+|   ├── rover-board-name.eli
+|   └── rover-board-name.lib
 └── schematic-template.dch
 ```
+
+## General Notes
+* __Changes to the auv, drone, rover, or components folders must go in 
+  separate commits (i.e. only change one of these folders in a 
+  single commit)__
+* If you run in to problems, contact a division leader instead of messing
+  around
 
 ## README Template
 ```
@@ -54,44 +65,36 @@ __Description:__ Motor driver board with 30A current rating
     * Have words separated by dashes `-`
   *  Board files must:
     * Share the same name as their folder
-    * Have a `_v1`, `_v2`, etc suffix to indicate the version (if there are several)
+    * Have a `_v1`, `_v2`, etc suffix to indicate the reversion (if there are several)
+    * Each board that is printed must have a revision stored
   * Schematic files must:
     * Be based on the `schematic-template.sch` file in the root directory
     * Have all the info in the title block filled out
-  * Component and pattern files must follow the format: `manufacturer_part-number_part-function`
+  * Component and pattern files should be added to using their part-number,
+    * If part-number has letter in it, use lower case for all letters.
+    * The library name must be the same as the file name.
+      * The library name can be in different casing that the file name.
+    * If the library is a footprint for a board use the following for file name and library name:
+      * `<company>-<board_name>-<version>`
+        * `rover`, `drone` `auv` for `<company>` if the board is made by McGill Robotics.
   * Board READMEs must follow the template above
+  * **DO NOT** add DipTrace image file to the git repository (.dip0, .dip1, etc.)
 
 ## General Workflow
 1. Sync repository (or `git pull`)
-2. Open file, do work, save file
-3. Select files using checkboxes (or `git add FILENAMES`)
-4. Write message describing changes and press the commit button 
+2. Create a new branch with sensible name and checkout to that branch.
+    * Branch name examples:
+        * component/part_number
+        * rover/science/ph_sensor
+        * auv/power/current_sensor
+3. Make modificitons you want to make.
+4. Select files using checkboxes (or `git add FILENAMES`)
+5. Write message describing changes and press the commit button 
   (or `git commit -m "MESSAGE"`)
-5. You may repeat steps 2.-4. several times before pushing if you want
-6. Sync repository (or `git pull` then `git push`)
-
-## Merge Conflicts
-* If someone has updated your board while you were working on it, 
-  you will not be able to push to the Git repository
-* __Do not resolve this by overwriting the other person's changes__
-* You must get the other person's changes and re-apply yours manually:
-    1. Save the conflicting file elsewhere if you wish
-    2. Select the gear icon and press `Undo most recent commit`
-    3. Repeat step 2 until all of your conflicting commits have been
-       undone
-    4. In the `Changes` view on the GitHub Desktop app, right-click
-       on all the changed files and click `Discard changes`
-    5. Sync the repository
-    6. Based on the new version of the file, _manually_ 
-       re-apply your changes
-* On the command line, steps 2.-4. correspond to running 
-  `git reset --hard HEAD~1` until your conflicting commits
-  have been removed (or run `git reset --hard SHA`, where SHA is the hash
-  of the commit you want to revert to)
-
-## Additional Notes
-* __Changes to the auv, drone, rover, or components folders must go in 
-  separate commits (i.e. only change one of these folders in a 
-  single commit)__
-* If you run in to problems, contact a division leader instead of messing
-  around
+6. You may repeat steps 2.-4. several times before pushing if you want
+7. Sync repository (or `git pull` then `git push`)
+8. Once your branch is in a state ready to be released, open a pull request.
+9. Your pull request will be reviewed by Division leads.
+  * Division Lead may request modifications, you can push more modification to that branch.
+  * Division Lead may approve your changes and you work will be merged back to `master` branch.
+**Note**: you may work on multiple branches, and you can switch back and forth.

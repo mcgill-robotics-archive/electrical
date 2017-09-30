@@ -5,6 +5,7 @@
 *.stl
 *.stp
 *.step
+*.dip*
 *.dipb*
 *.txt
 Thumbs.db
