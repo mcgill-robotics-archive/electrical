@@ -9,8 +9,8 @@
 |   |           └── ...
 |   ├── io
 |   |   ├── motor-driver
-|   |   |   ├── motor-driver_v1.dip
-|   |   |   ├── motor-driver_v2.dip
+|   |   |   ├── motor-driver-v1.dip
+|   |   |   ├── motor-driver-v2.dip
 |   |   |   ├── motor-driver.dch
 |   |   |   └── README.md
 |   |   └── depth-sensor
@@ -65,7 +65,7 @@ __Description:__ Motor driver board with 30A current rating
     * Have words separated by dashes `-`
   *  Board files must:
     * Share the same name as their folder
-    * Have a `_v1`, `_v2`, etc suffix to indicate the reversion (if there are several)
+    * Have a `-v1`, `-v2`, etc suffix to indicate the reversion (if there are several)
     * Each board that is printed must have a revision stored
   * Schematic files must:
     * Be based on the `schematic-template.sch` file in the root directory
