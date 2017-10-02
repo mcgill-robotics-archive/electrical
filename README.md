@@ -29,16 +29,16 @@
 ├── rover
 |   └── ...
 ├── components
-|   ├── part-number.eli
-|   ├── part-number.lib
+|   ├── <part_number>-<company>-<short_description>.eli
+|   ├── <part_number>-<company>-<short_description>.lib
 |   ├── rover-board-name.eli
 |   └── rover-board-name.lib
 └── schematic-template.dch
 ```
 
 ## General Notes
-* __Changes to the auv, drone, rover, or components folders must go in 
-  separate commits (i.e. only change one of these folders in a 
+* __Changes to the auv, drone, rover, or components folders must go in
+  separate commits (i.e. only change one of these folders in a
   single commit)__
 * If you run in to problems, contact a division leader instead of messing
   around
@@ -65,18 +65,30 @@ __Description:__ Motor driver board with 30A current rating
     * Have words separated by dashes `-`
   *  Board files must:
     * Share the same name as their folder
-    * Have a `-v1`, `-v2`, etc suffix to indicate the reversion (if there are several)
+    * Have a `-v1`, `-v2`, etc suffix to indicate the reversion (if there are
+      several)
     * Each board that is printed must have a revision stored
   * Schematic files must:
+    * Share the same name as their folder
     * Be based on the `schematic-template.sch` file in the root directory
     * Have all the info in the title block filled out
-  * Component and pattern files should be added to using their part-number,
-    * If part-number has letter in it, use lower case for all letters.
-    * The library name must be the same as the file name.
-      * The library name can be in different casing that the file name.
-    * If the library is a footprint for a board use the following for file name and library name:
+  * Component and pattern files must:
+    * Be placed in the `components` folder, do not put component or pattern
+    files alongside board and schematic files
+    * Be named as `<part_number>-<company>-<description>`
+    * Use lowercase for all letters
+    * Replace all non-alphanumerical characters in the part number, company and
+    description with underscores `_`
+    * Separate part number, company, and description with dash `-`
+    * The library name must be the same as the part number
+      * The library name can be in different casing that the file name
+    * If the library is a footprint for a board use the following for file name
+    and library name:
       * `<company>-<board_name>-<version>`
-        * `rover`, `drone` `auv` for `<company>` if the board is made by McGill Robotics.
+        * `rover`, `drone` `auv` for `<company>` if the board is made by McGill
+        Robotics
+        * The library name must be `<Company> <Board Name> <Version>`, note that
+        uppercases and spaces are allowed here.
   * Board READMEs must follow the template above
   * **DO NOT** add DipTrace image file to the git repository (.dip0, .dip1, etc.)
 
@@ -89,12 +101,14 @@ __Description:__ Motor driver board with 30A current rating
         * auv/power/current_sensor
 3. Make modificitons you want to make.
 4. Select files using checkboxes (or `git add FILENAMES`)
-5. Write message describing changes and press the commit button 
+5. Write message describing changes and press the commit button
   (or `git commit -m "MESSAGE"`)
 6. You may repeat steps 2.-4. several times before pushing if you want
 7. Sync repository (or `git pull` then `git push`)
 8. Once your branch is in a state ready to be released, open a pull request.
 9. Your pull request will be reviewed by Division leads.
-  * Division Lead may request modifications, you can push more modification to that branch.
-  * Division Lead may approve your changes and you work will be merged back to `master` branch.
+  * Division Lead may request modifications, you can push more modification to
+  that branch.
+  * Division Lead may approve your changes and you work will be merged back to
+  `master` branch.
 **Note**: you may work on multiple branches, and you can switch back and forth.
