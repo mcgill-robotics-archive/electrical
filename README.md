@@ -112,3 +112,10 @@ __Description:__ Motor driver board with 30A current rating
   * Division Lead may approve your changes and you work will be merged back to
   `master` branch.
 **Note**: you may work on multiple branches, and you can switch back and forth.
+
+## Extra Notes:
+If you wish to add an equation to your README file, you can take advantage of
+[this latex equation edditor](http://www.sciweavers.org/free-online-latex-equation-editor).
+
+Example:
+<img src="http://www.sciweavers.org/tex2img.php?eq=R_%7BENT%7D%20%3D%20%20%5Cfrac%7BV_%7Bstart%7D-V_%7Bstop%7D%7D%7BI_%7BHYS%7D%7D%20%3D%20%20%5Cfrac%7B21.54-21%7D%7B3.6%20%5Ctimes%2010%5E%7B-6%7D%7D%20%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R_{ENT} =  \frac{V_{start}-V_{stop}}{I_{HYS}} =  \frac{21.54-21}{3.6 \times 10^{-6}}  " width="287" height="46" />

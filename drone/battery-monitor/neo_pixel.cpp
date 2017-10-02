@@ -31,7 +31,7 @@
   <http://www.gnu.org/licenses/>.
   -------------------------------------------------------------------------*/
 
-#include "Adafruit_NeoPixel.h"
+#include "neo_pixel.h"
 
 // Constructor when length, pin and type are known at compile-time:
 Adafruit_NeoPixel::Adafruit_NeoPixel(uint16_t n, uint8_t p, neoPixelType t) :
@@ -90,18 +90,18 @@ void Adafruit_NeoPixel::updateType(neoPixelType t) {
 
 void Adafruit_NeoPixel::show(void) {
   if(!pixels) return;
-  
+
   noInterrupts(); // Need 100% focus on instruction timing
-  
+
   volatile uint16_t
     i   = numBytes; // Loop counter
-  
+
   volatile uint8_t
    *ptr = pixels,   // Pointer to next byte
     b   = *ptr++,   // Current byte value
     hi,             // PORT w/output bit set high
     lo;             // PORT w/output bit set low
-  
+
   volatile uint8_t n1, n2 = 0;  // First, next bits out
   hi = PORTB |  pinMask;
   lo = PORTB & ~pinMask;

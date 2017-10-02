@@ -1,4 +1,4 @@
-# Isoduino Mega 640/1280/2560
+# Depth Sensor
 
 __Author:__ Ahmed Sami, Bei Chen Liu
 
@@ -9,6 +9,9 @@ __Features:__
 * High resolusion pressure sensor allowing precise depth measurement 
 
 ## Changelog:
+
+### Version 1.3
+- Change the footprint for the USB connector to the correct size 
 
 ### Version 1.2.1
 - Changed the oscillator in the schematic and Layout to be 8 MHz

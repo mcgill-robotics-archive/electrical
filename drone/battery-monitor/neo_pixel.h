@@ -16,8 +16,8 @@
   <http://www.gnu.org/licenses/>.
   --------------------------------------------------------------------*/
 
-#ifndef ADAFRUIT_NEOPIXEL_H
-#define ADAFRUIT_NEOPIXEL_H
+#ifndef NEOPIXEL_H
+#define NEOPIXEL_H
 
 #if (ARDUINO >= 100)
  #include <Arduino.h>
@@ -178,4 +178,4 @@ class Adafruit_NeoPixel {
 
 };
 
-#endif // ADAFRUIT_NEOPIXEL_H
+#endif // NEOPIXEL_H

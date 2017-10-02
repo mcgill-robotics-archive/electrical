@@ -1,6 +1,7 @@
 # Drone Kill Switch
 
 __Author__: Bei Chen Liu
+
 __Description__: A simple [high-side PMOS switch](http://www.onsemi.com/pub/Collateral/AND9093-D.PDF) to allow user to turn on or off high current components. Component values are highly configurable, please refer to previously linked document to set values.
 
 ## Component Explanations:

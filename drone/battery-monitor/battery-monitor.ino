@@ -1,4 +1,4 @@
-#include "Adafruit_NeoPixel.h"
+#include "neo_pixel.h"
 
 #define VOLTAGE_HIGH 24.8
 #define VOLTAGE_LOW 20.5
