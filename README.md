@@ -115,7 +115,11 @@ __Description:__ Motor driver board with 30A current rating
 
 ## Extra Notes:
 If you wish to add an equation to your README file, you can take advantage of
-[this latex equation edditor](http://www.sciweavers.org/free-online-latex-equation-editor).
+[this latex equation edditor](https://www.codecogs.com/latex/eqneditor.php).
+Export the `html` link for `svg` and you can then embedded it into your README.
 
 Example:
-<img src="https://latex.codecogs.com/svg.latex?\inline&space;\frac{1}{2}&plus;x^{sin(y)}" title="\frac{1}{2}+x^{sin(y)}" />
+```
+<img src="https://latex.codecogs.com/svg.latex?\inline&space;\frac{1}{2}&plus;x^{sin(y)}"/>
+```
+<img src="https://latex.codecogs.com/svg.latex?\inline&space;\frac{1}{2}&plus;x^{sin(y)}"/>
