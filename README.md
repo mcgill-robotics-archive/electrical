@@ -115,7 +115,7 @@ __Description:__ Motor driver board with 30A current rating
 
 ## Extra Notes:
 If you wish to add an equation to your README file, you can take advantage of
-[this latex equation edditor](https://www.codecogs.com/latex/eqneditor.php).
+[this latex equation editor](https://www.codecogs.com/latex/eqneditor.php).
 Export the `html` link for `svg` and you can then embedded it into your README.
 
 Example:
