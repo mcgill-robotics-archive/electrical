@@ -43,7 +43,7 @@ void getWeather()
   humidity = sensor.getRH();
 
   // Measure Temperature from the Si7021 in Fahrenheit
-  tempf = sensor.getTempC();
+  tempf = sensor.getTempF();
   // Temperature is measured every time RH is requested.
   // It is faster, therefore, to read it from previous RH
   // measurement with getTemp() instead with readTemp()
