@@ -6,7 +6,6 @@
 *.stp
 *.step
 *.dip[0-9]
-*.dipb*
 *.txt
 Thumbs.db
 .DS_Store
