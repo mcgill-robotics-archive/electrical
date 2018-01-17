@@ -1,4 +1,7 @@
 # Airspeed Sensor
+From the datasheet:
+"The MS4525DO is a small, ceramic based, PCB mounted pressure transducer from Measurement Specialties...[it]  is fully calibrated and temperature compensated with a total error band (TEB) of less than 1.0% over the compensated pressure range. The sensor operates from single supply of either 3.3 or 5.0VDC and requires a single external component for proper operation.
+The rugged ceramic transducer is available in side port, top port, and manifold mount and can measure absolute, gauge, differential, vacuum or compound pressure from 1 to 150psi. The 1/8? barbed pressure ports mate securely with 3/32? ID tubing."
 
 ## Inputs
 - `+5V`: Voltage (supplied from board)
