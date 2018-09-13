@@ -1,0 +1,65 @@
+#include <SPI.h>
+
+int CS = 10; //Chip or Slave select
+float deg = 0.00;
+
+uint16_t ABSposition = 0;
+uint16_t ABSposition_last = 0;
+uint8_t temp[2];
+
+void setup() {
+  pinMode(CS, OUTPUT);
+  digitalWrite(CS, HIGH);
+
+  SPI.begin();
+  SPI.setBitOrder(MSBFIRST);
+  SPI.setDataMode(SPI_MODE0);
+  SPI.setClockDivider(SPI_CLOCK_DIV32);
+  Serial.begin(115200);
+  Serial.flush();
+  delay(2000);
+  SPI.end();
+}
+
+uint8_t SPI_T(uint8_t msg) { //repetive SPI transmit sequence
+  uint8_t msg_temp = 0;
+  digitalWrite(CS, LOW); //select spi device
+  msg_temp = SPI.transfer(msg); //send and recieve
+  digitalWrite(CS, HIGH);
+  delay(2);
+  return (msg_temp);
+}
+
+void loop() {
+  uint8_t recieved = 0xA5;
+  ABSposition = 0;
+
+  SPI.begin();
+  digitalWrite(CS, LOW);
+  SPI_T(0x10); //read command
+
+  while (true) { //check if encoder is still working
+    recieved = SPI_T(0x00);
+    if (recieved == 0x10)break;
+  }
+
+  temp[0] = SPI_T(0x00); //recieve MSB
+  temp[1] = SPI_T(0x00); // recieve LSB
+  digitalWrite(CS, HIGH);
+  SPI.end();
+
+  if (temp[0] != 0xA5 && temp[1] != 0x10) { //outliers
+    temp[0] &= 0x0F; //mask out the first 4 bits
+
+    if (temp[0] + temp[1] != 0) { //outliers
+      ABSposition = temp[0] << 8; //shift MSB to correct ABSposition
+      ABSposition += temp[1]; // add LSB to ABSposition
+
+      if (ABSposition != ABSposition_last) { //change in position
+        ABSposition_last = ABSposition;
+        deg = ABSposition * 0.08789; //aprox 360/4096
+        Serial.println(deg); //position in degrees
+      }
+    }
+  }
+}
